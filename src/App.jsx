@@ -3,11 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import styled, { ThemeProvider } from 'styled-components';
-import { darkTheme } from './utils/Themes';
+import { darkTheme, lightTheme } from './utils/Themes';
 import Navbar from './components/Navbar';
 import Hero from './components/HeroSection';
 import Skills from './components/Skills';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Projects from './components/Projects';
 
 
 const Body = styled.div`
@@ -45,6 +46,7 @@ function App() {
             <Wrapper>
               <Skills />
             </Wrapper>
+            <Projects />
           </Body>
 
         </Router>
