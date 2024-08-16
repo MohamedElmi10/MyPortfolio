@@ -17,7 +17,6 @@ export const HeroContainer = styled.div`
   }
   z-index: 1;
 
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
 export const HeroBg = styled.div`
@@ -205,39 +204,39 @@ const ResumeButton = styled.a`
 `;
 
 const Hero = () => {
-    return (
-        <div id="about">
-            <HeroContainer>
-                <HeroBg>
-                    {/* <HeroBgAnimation /> */}
-                </HeroBg>
-                <HeroInnerContainer >
-                    <HeroLeftContainer id="Left">
-                        <Title>Hi, I am <br /> {Bio.name}</Title>
-                        <TextLoop>
-                            I am a
-                            <Span>
-                                <Typewriter
-                                    options={{
-                                        strings: Bio.roles,
-                                        autoStart: true,
-                                        loop: true,
-                                    }}
-                                />
-                            </Span>
-                        </TextLoop>
-                        <SubTitle>{Bio.description}</SubTitle>
-                        <ResumeButton href={Bio.resume} target='display'>Check Resume</ResumeButton>
-                    </HeroLeftContainer>
+  return (
+    <div id="about">
+      <HeroContainer>
+        <HeroBg>
+          {/* <HeroBgAnimation /> */}
+        </HeroBg>
+        <HeroInnerContainer >
+          <HeroLeftContainer id="Left">
+            <Title>Hi, I am <br /> {Bio.name}</Title>
+            <TextLoop>
+              I am a
+              <Span>
+                <Typewriter
+                  options={{
+                    strings: Bio.roles,
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </Span>
+            </TextLoop>
+            <SubTitle>{Bio.description}</SubTitle>
+            <ResumeButton href={Bio.resume} target='display'>Check Resume</ResumeButton>
+          </HeroLeftContainer>
 
-                    <HeroRightContainer id="Right">
+          <HeroRightContainer id="Right">
 
-                        <Img src={HeroImage} alt="hero-image" />
-                    </HeroRightContainer>
-                </HeroInnerContainer>
+            <Img src={HeroImage} alt="hero-image" />
+          </HeroRightContainer>
+        </HeroInnerContainer>
 
-            </HeroContainer>
-        </div>
-    )
+      </HeroContainer>
+    </div>
+  )
 }
 export default Hero;

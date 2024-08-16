@@ -177,6 +177,9 @@ const MobileLink = styled.a`
     border-bottom: 2px solid ${({ theme }) => theme.primary};
   }
 `;
+const EventlistenerForGithubBtn = () => {
+    window.open(Bio.github, "_blank")
+}
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const theme = useTheme();
@@ -199,7 +202,7 @@ const Navbar = () => {
                     <NavLink href='#education'>Education</NavLink>
                 </NavItems>
                 <ButtonContainer>
-                    <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
+                    <GitHubButton onClick={EventlistenerForGithubBtn} target="_blank">Github Profile</GitHubButton>
                 </ButtonContainer>
                 {
                     isOpen &&
