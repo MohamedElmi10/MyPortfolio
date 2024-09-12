@@ -177,7 +177,7 @@ export const projects = [
         title: "WeatherWave",
         date: "Feb 2024 - Jul 2024",
         description:
-            "Developed a Frontend based weather app",
+            "Developed a Frontend based weather app. Built with vanilla JS",
         image:
             WeatherWave,
         tags: ["HTML", "CSS", "Javascript", "Bootstrap"],
@@ -191,7 +191,7 @@ export const projects = [
         title: "Portfolio",
         date: "Jul 2024 - Aug 2024",
         description:
-            "Developed a ChattApp where you can register a user, log in and send messages",
+            "Developed my portfolio. Built with ReactJS",
         image:
             PortFolioImg,
         tags: ["HTML", "CSS", "Javascript", "ReactJS"],
@@ -205,7 +205,7 @@ export const projects = [
         title: "ChattApp",
         date: "Aug 2024 - Aug 2024",
         description:
-            "Developed a ChattApp where you can register a user, log in and send messages",
+            "Developed a ChattApp where you can register a user, log in and send messages. Built with ReactJS",
         image:
             ChattApp,
         tags: ["HTML", "CSS", "Javascript", "ReactJS"],
