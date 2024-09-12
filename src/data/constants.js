@@ -211,7 +211,7 @@ export const projects = [
         tags: ["HTML", "CSS", "Javascript", "ReactJS"],
         category: "web app",
         github: "https://github.com/MohamedElmi10/ChattApp",
-        webapp: "https://weatherwaave.netlify.app/",
+        webapp: "https://chattappliccation.netlify.app",
 
     }
 
