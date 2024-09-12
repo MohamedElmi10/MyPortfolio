@@ -1,5 +1,7 @@
 import CypressImg from "../Pictures/Cypress_Logotype_Dark-Color.svg"
 import WeatherWave from "../Pictures/WeatherWave.png"
+import ChattApp from "../Pictures/ChattApp.png"
+import PortFolioImg from "../Pictures/PortFolio.png"
 export const Bio = {
     name: "Mohamed Elmi",
     roles: [
@@ -132,7 +134,6 @@ export const education = [
 ];
 
 export const projects = [
-
     {
         id: 0,
         title: "WeatherWave",
@@ -147,6 +148,35 @@ export const projects = [
         webapp: "https://weatherwaave.netlify.app/",
 
     },
+    {
+        id: 1,
+        title: "Portfolio",
+        date: "Jul 2024 - Aug 2024",
+        description:
+            "Developed a ChattApp where you can register a user, log in and send messages",
+        image:
+            PortFolioImg,
+        tags: ["HTML", "CSS", "Javascript", "ReactJS"],
+        category: "web app",
+        github: "https://github.com/MohamedElmi10/MyPortfolio",
+        webapp: "https://elmi-portfolio.netlify.app/",
+
+    },
+    {
+        id: 2,
+        title: "ChattApp",
+        date: "Aug 2024 - Aug 2024",
+        description:
+            "Developed a ChattApp where you can register a user, log in and send messages",
+        image:
+            ChattApp,
+        tags: ["HTML", "CSS", "Javascript", "ReactJS"],
+        category: "web app",
+        github: "https://github.com/MohamedElmi10/ChattApp",
+        webapp: "https://weatherwaave.netlify.app/",
+
+    }
+
 
 ];
 
