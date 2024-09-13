@@ -19,9 +19,10 @@ export const Bio = {
     description:
         "Passionate Front End Developer with a focus on creating intuitive and visually appealing digital experiences. Eager to learn and tackle new challenges with a positive attitude, I strive to deliver high-quality, user-centered solutions.",
     github: "https://github.com/MohamedElmi10",
+
     resume:
         "https://drive.google.com/file/d/1sE3N-9G3jVLsadTo8S4mRPFffpPe4PAJ/view?usp=sharing",
-    linkedin: "www.linkedin.com/in/-elmi",
+    linkedin: "https://www.linkedin.com/in/mohamed-elmi-199007291/",
 };
 
 export const skills = [

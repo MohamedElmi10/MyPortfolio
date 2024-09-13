@@ -86,6 +86,7 @@ const ButtonContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: end;
+    margin-right: 20px;
     width: 80%;
     height: 100%;
     padding: 0 6px;
@@ -94,7 +95,7 @@ const ButtonContainer = styled.div`
     }
 `;
 
-const GitHubButton = styled.div`
+const SocialLinks = styled.div`
     background-color: transparent;
     color:${({ theme }) => theme.primary} ;
     border: 1.8px solid ${({ theme }) => theme.text_primary};
@@ -104,6 +105,7 @@ const GitHubButton = styled.div`
     align-items: center;
     padding: 0px 20px;
     font-size: 1rem;
+    margin-right: 10px;
     font-weight:500;
     cursor: pointer;
     height: 70%;
@@ -180,6 +182,9 @@ const MobileLink = styled.a`
 const EventlistenerForGithubBtn = () => {
     window.open(Bio.github, "_blank")
 }
+const EventlistenerForLinkedinBtn = () => {
+    window.open(Bio.linkedin, "_blank")
+}
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const theme = useTheme();
@@ -202,7 +207,8 @@ const Navbar = () => {
                     {/* <NavLink href='#education'>Education</NavLink> */}
                 </NavItems>
                 <ButtonContainer>
-                    <GitHubButton onClick={EventlistenerForGithubBtn} target="_blank">Github Profile</GitHubButton>
+                    <SocialLinks onClick={EventlistenerForGithubBtn} target="_blank">Github Profile</SocialLinks>
+                    <SocialLinks onClick={EventlistenerForLinkedinBtn} target="_blank">linkedin Profile</SocialLinks>
                 </ButtonContainer>
                 {
                     isOpen &&
@@ -222,7 +228,8 @@ const Navbar = () => {
                         {/* <MobileLink href='#education' onClick={() => {
                             setIsOpen(!isOpen)
                         }}>Education</MobileLink> */}
-                        <GitHubButton style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }} onClick={EventlistenerForGithubBtn} target="_blank">Github Profile</GitHubButton>
+                        <SocialLinks style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }} onClick={EventlistenerForGithubBtn} target="_blank">Github Profile</SocialLinks>
+                        <SocialLinks style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }} onClick={EventlistenerForLinkedinBtn} target="_blank">Linkedin Profile</SocialLinks>
                     </MobileMenu>
                 }
             </NavbarContainer>
