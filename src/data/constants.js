@@ -10,6 +10,7 @@ import ConfluenceLogo from "../Pictures/Confluence.png"
 import JwtLogo from "../Pictures/JwtLogo.png"
 import VimLogo from "../Pictures/Vim.jpg"
 import TrelloLogo from "../Pictures/Trello.png"
+import StoryBookLogo from "../Pictures/Storybook.png"
 export const Bio = {
     name: "Mohamed Elmi",
     roles: [
@@ -135,7 +136,11 @@ export const skills = [
                 name: "Vim",
                 image:
                     VimLogo,
-            },
+            },{
+		name: "Storybook",
+		image: StoryBookLogo,
+
+		}
             {
                 name: "Trello",
                 image:
