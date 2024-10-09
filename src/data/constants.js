@@ -22,7 +22,7 @@ export const Bio = {
     github: "https://github.com/MohamedElmi10",
 
     resume:
-        "https://drive.google.com/file/d/1sE3N-9G3jVLsadTo8S4mRPFffpPe4PAJ/view?usp=sharing",
+        "https://drive.google.com/file/d/1R7bzc_vPDXxBVijAxXCu0YkSYLVhuDY8/view?usp=drive_link",
     linkedin: "https://www.linkedin.com/in/mohamed-elmi-199007291/",
 };
 
