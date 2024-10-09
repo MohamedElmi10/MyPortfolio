@@ -231,7 +231,7 @@ const Hero = () => {
 
           <HeroRightContainer id="Right">
 
-            <Img src={HeroImage} alt="hero-image" />
+            {/* <Img src={HeroImage} alt="hero-image" />*/}
           </HeroRightContainer>
         </HeroInnerContainer>
 
