@@ -203,6 +203,68 @@ const ResumeButton = styled.a`
 
 `;
 
+const UpdateBanner = styled.div`
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
+  border: 2px solid rgba(255, 193, 7, 0.3);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s infinite;
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 8px 32px rgba(255, 193, 7, 0.2);
+    }
+    50% {
+      box-shadow: 0 8px 32px rgba(255, 193, 7, 0.4);
+    }
+    100% {
+      box-shadow: 0 8px 32px rgba(255, 193, 7, 0.2);
+    }
+  }
+  
+  @media (max-width: 960px) {
+    max-width: 100%;
+    margin: 0 20px;
+  }
+`;
+
+const BannerTitle = styled.h3`
+  color: ${({ theme }) => theme.primary};
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+`;
+
+const BannerText = styled.p`
+  color: ${({ theme }) => theme.text_primary};
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.9;
+`;
+
+const UpdateBadge = styled.span`
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  border: none;
+  cursor: default;
+  user-select: none;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.2);
+`;
+
 const Hero = () => {
   return (
     <div id="about">
@@ -230,8 +292,14 @@ const Hero = () => {
           </HeroLeftContainer>
 
           <HeroRightContainer id="Right">
-
-            {/* <Img src={HeroImage} alt="hero-image" />*/}
+            <UpdateBanner>
+              <BannerTitle>Portfolio Update</BannerTitle>
+              <BannerText>
+                This portfolio hasn't been updated lately. 
+                A  update is incoming with new projects!
+              </BannerText>
+              <UpdateBadge>Update Incoming</UpdateBadge>
+            </UpdateBanner>
           </HeroRightContainer>
         </HeroInnerContainer>
 

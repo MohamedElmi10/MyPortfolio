@@ -118,7 +118,7 @@ const Projects = () => {
             <Wrapper>
                 <Title>Projects</Title>
                 <Desc>
-                    During my school I have worked on a wide range of projects. Some more succesfull than others.
+                   The projects showcased here represent only my early work and do not reflect the full scope of my experience. <br /> Portfolio will be updated shortly.
                 </Desc>
                 <CardContainer>
                     {projects.map((project) => (
