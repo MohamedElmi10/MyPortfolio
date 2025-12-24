@@ -1,5 +1,6 @@
 
 import { projects } from "../../data/constants"
+import WeatherWaveVideo from "../../Pictures/WeatherApp.mov"
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -52,11 +53,12 @@ const CardContainer = styled.div`
     align-items: center;
     gap: 28px;
     flex-wrap: wrap;
+    padding-bottom: 40px;
 
 `;
 const Card = styled.div`
     width: 330px;
-    height: 490px;
+    min-height: 490px;
     background-color: ${({ theme }) => theme.card};
     cursor: pointer;
     border-radius: 10px;
@@ -95,15 +97,50 @@ const Date = styled.div`
 
 const Description = styled.div`
     font-weight: 400;
-    color: ${({ theme }) => theme.text_secondary + 99};
+    font-size: 14px;
+    line-height: 1.6;
+    color: ${({ theme }) => theme.text_secondary};
     overflow: hidden;
     margin-top: 8px;
+    padding: 10px 12px;
+    background: ${({ theme }) => theme.card + 50};
+    border-radius: 8px;
+    border-left: 2px solid ${({ theme }) => theme.primary};
     display: -webkit-box;
     max-width: 100%;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
-`    ;
+    @media only screen and (max-width: 768px) {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+`;
+
+const TechStack = styled.div`
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+`;
+
+const TechLabel = styled.span`
+    font-size: 12px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.text_secondary};
+    margin-right: 4px;
+`;
+
+const TechTag = styled.span`
+    font-size: 11px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.primary};
+    background-color: ${({ theme }) => theme.primary + 15};
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid ${({ theme }) => theme.primary + 50};
+`;
 const StyledImage = styled.img`
     width: 100%;
     height: 180px;
@@ -112,24 +149,60 @@ const StyledImage = styled.img`
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
 `;
 
+const StyledVideo = styled.video`
+    width: 100%;
+    height: 180px;
+    background-color: ${({ theme }) => theme.white};
+    border-radius: 10px;
+    box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
+    aspect-ratio: 16 / 9;       /* behåll proportioner */
+    object-fit: contain;  
+`;
+
 const Projects = () => {
     return (
         <Container id="projects">
             <Wrapper>
                 <Title>Projects</Title>
                 <Desc>
-                    During my school I have worked on a wide range of projects. Some more succesfull than others.
+                   The projects showcased here represent only my early work and do not reflect the full scope of my experience. <br /> Portfolio will be updated shortly.
                 </Desc>
                 <CardContainer>
                     {projects.map((project) => (
-                        <Card key={project.id}
-                            onClick={() => window.open(project.webapp, "_blank")}
+                        <Card 
+                            key={project.id}
+                            onClick={() => {
+                                const url = project.webapp && project.webapp !== "#" 
+                                    ? project.webapp 
+                                    : project.github;
+                                if (url && url !== "#") {
+                                    window.open(url, "_blank");
+                                }
+                            }}
                         >
                             <Details>
                                 <Title>{project.title}</Title>
                                 <Date>{project.date}</Date>
                                 <Description>{project.description}</Description>
-                                <StyledImage src={project.image} />
+                                {project.type === 'video' ? (
+                                    <StyledVideo 
+                                        src={project.image} 
+                                        controls 
+                                        preload="metadata"
+                                        poster={project.poster}
+                                        onClick={(e) => e.stopPropagation()}
+                                    />
+                                ) : (
+                                    <StyledImage src={project.image} />
+                                )}
+                                {project.techStack && project.techStack.length > 0 && (
+                                    <TechStack>
+                                        <TechLabel>Built with:</TechLabel>
+                                        {project.techStack.map((tech, index) => (
+                                            <TechTag key={index}>{tech}</TechTag>
+                                        ))}
+                                    </TechStack>
+                                )}
                             </Details>
                         </Card>
 
