@@ -1,5 +1,6 @@
 import WeatherWave from "../Pictures/WeatherWave.png"
 import WeatherWaveVideo from "../Pictures/WeatherApp.mov"
+import ReactNativeApp from "../Pictures/ReactNativeApp.png"
 import ChattApp from "../Pictures/ChattApp.png"
 import PortFolioImg from "../Pictures/PortFolio.png"
 import CypressImg from "../Pictures/Cypress.png"
@@ -218,7 +219,7 @@ export const projects = [
             "A demonstration video showcasing weather mobile app features and functionality. ",
         image: WeatherWaveVideo,
         type: "video",
-        poster: WeatherWave, // Using the existing WeatherWave image as poster
+        poster: ReactNativeApp, // Using the existing WeatherWave image as poster
         tags: ["Video", "Demo", "WeatherWave", "JavaScript", "React Native"],
         category: "video",
         github: "https://github.com/MohamedElmi10/weather-api-website.git",
