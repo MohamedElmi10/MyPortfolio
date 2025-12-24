@@ -292,14 +292,14 @@ const Hero = () => {
           </HeroLeftContainer>
 
           <HeroRightContainer id="Right">
-            <UpdateBanner>
+            {/* <UpdateBanner>
               <BannerTitle>Portfolio Update</BannerTitle>
               <BannerText>
                 This portfolio hasn't been updated lately. 
                 A  update is incoming with new projects!
               </BannerText>
               <UpdateBadge>Update Incoming</UpdateBadge>
-            </UpdateBanner>
+            </UpdateBanner> */}
           </HeroRightContainer>
         </HeroInnerContainer>
 

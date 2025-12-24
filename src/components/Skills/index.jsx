@@ -9,6 +9,7 @@ justify-content: center;
 position: relative;
 z-index: 1;
 align-items: center;
+padding-bottom: 40px;
 `
 
 const Wrapper = styled.div`
@@ -52,6 +53,7 @@ const SkillsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
+  margin-bottom: 60px;
   gap: 30px;
   justify-content: center;
 `

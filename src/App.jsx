@@ -9,6 +9,7 @@ import Hero from './components/HeroSection';
 import Skills from './components/Skills';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 
 const Body = styled.div`
@@ -31,6 +32,8 @@ background: linear-gradient(
 );
 width: 100%;
 clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
+padding-bottom: 100px;
+overflow: visible;
 
 `
 function App() {
@@ -47,6 +50,7 @@ function App() {
               <Skills />
             </Wrapper>
             <Projects />
+            <Footer />
           </Body>
 
         </Router>
