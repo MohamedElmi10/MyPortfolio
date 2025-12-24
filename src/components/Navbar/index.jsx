@@ -1,7 +1,7 @@
 
 import { Link as LinkR } from "react-router-dom"
 import styled, { useTheme } from "styled-components";
-import Logo from "../../Pictures/PortfolioLogo.png"
+import Logo from "../../Pictures/PortfolioIMG.png"
 import { DiCssdeck } from "react-icons/di";
 import { FaBars } from 'react-icons/fa';
 import { useState } from "react";
