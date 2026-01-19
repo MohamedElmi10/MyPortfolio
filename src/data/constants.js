@@ -14,6 +14,10 @@ import VimLogo from "../Pictures/Vim.jpg"
 import TrelloLogo from "../Pictures/Trello.png"
 import StoryBookLogo from "../Pictures/StorybookLogo.png"
 import UvakApp from "../Pictures/UvakImg.png"
+import Healthtech1 from "../Pictures/Healthtech 1.png"
+import Healthtech2 from "../Pictures/Healthtech 2.png"
+import Healthtech3 from "../Pictures/Healthtech 3.png"
+import Healthtech4 from "../Pictures/Healthtech 4.png"
 export const Bio = {
     name: "Mohamed Elmi",
     roles: [
@@ -196,6 +200,7 @@ export const education = [
 ];
 
 export const projects = [
+   
     {
         id: 0,
         title: "Uvak App",
@@ -207,7 +212,7 @@ export const projects = [
         tags: ["HTML", "CSS", "Javascript", "ReactJS"],
         category: "web app",
         github: "",
-        webapp: "https://angelena-electrometric-kiara.ngrok-free.dev/",
+        webapp: "https://uvak.se/",
         techStack: ["React", "TypeScript", "Tailwind CSS", "Ant Design"],
 
     },
@@ -228,9 +233,21 @@ export const projects = [
 
 
     },
-   
     {
         id: 2,
+        title: "Healthtech ",
+        date: "Nov 2024 - May 2025",
+        description:
+            "Healthcare platform pages developed during my internship. Collaborated with designers, developers, and PMs.",
+        images: [Healthtech1, Healthtech2, Healthtech3, Healthtech4],
+        tags: ["React", "TypeScript", "Healthcare", "Web App"],
+        category: "web app",
+        github: "",
+        webapp: "#",
+        techStack: ["React", "TypeScript", "Tailwind CSS", "Ant Design"],
+    },
+    {
+        id: 3,
         title: "ChattApp",
         date: "Aug 2024 ",
         description:
@@ -245,7 +262,7 @@ export const projects = [
 
     },
     {
-        id: 3,
+        id: 4,
        
         title: "Portfolio",
         date: "Jul 2024 - Aug 2024",
@@ -262,7 +279,7 @@ export const projects = [
 
     },
     {
-        id: 4,
+        id: 5,
        
         title: "WeatherWave",
         date: "Feb 2024 - Jul 2024",
