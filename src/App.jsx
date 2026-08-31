@@ -9,6 +9,7 @@ import Hero from './components/HeroSection';
 import Skills from './components/Skills';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Projects from './components/Projects';
+import Certification from './components/Certification';
 import Footer from './components/Footer';
 
 
@@ -49,6 +50,7 @@ function App() {
             <Wrapper>
               <Skills />
             </Wrapper>
+            <Certification />
             <Projects />
             <Footer />
           </Body>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
-import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { EMAILJS_CONFIG } from "../../config/emailjs";
 
@@ -396,10 +396,6 @@ const Footer = () => {
           <ContactLink href={Bio.linkedin} target="_blank" rel="noopener noreferrer">
             <Icon><FaLinkedin /></Icon>
             LinkedIn
-          </ContactLink>
-          <ContactLink href={Bio.resume} target="_blank" rel="noopener noreferrer">
-            <Icon><FaFileAlt /></Icon>
-            Resume
           </ContactLink>
         </ContactLinks>
         {/* <Copyright>
