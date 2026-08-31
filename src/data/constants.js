@@ -13,6 +13,17 @@ import JwtLogo from "../Pictures/JwtLogo.png"
 import VimLogo from "../Pictures/Vim.jpg"
 import TrelloLogo from "../Pictures/Trello.png"
 import StoryBookLogo from "../Pictures/StorybookLogo.png"
+import Css3Logo from "../Pictures/Css3.svg"
+import JavaScriptLogo from "../Pictures/JavaScriptLogo.svg"
+import AntDesignLogo from "../Pictures/AntDesign.svg"
+import VsCodeLogo from "../Pictures/VsCode.svg"
+import NextJsLogo from "../Pictures/NextJs.svg"
+import AiArenaImg from "../Pictures/AiArena.png"
+import AzureAiFoundryLogo from "../Pictures/AzureAiFoundry.svg"
+import AzureOpenAILogo from "../Pictures/AzureOpenAI.svg"
+import AzureAiSearchLogo from "../Pictures/AzureAiSearch.svg"
+import ComputerVisionLogo from "../Pictures/ComputerVision.svg"
+import ContentSafetyLogo from "../Pictures/ContentSafety.svg"
 import UvakApp from "../Pictures/UvakImg.png"
 import Healthtech1 from "../Pictures/Healthtech 1.png"
 import Healthtech2 from "../Pictures/Healthtech 2.png"
@@ -21,19 +32,34 @@ import Healthtech4 from "../Pictures/Healthtech 4.png"
 export const Bio = {
     name: "Mohamed Elmi",
     roles: [
-        "Front End Developer",
-        "Programmer",
+        "AI Engineer",
+        "Azure AI Developer",
+        "Frontend Developer",
+        "Fullstack Developer",
     ],
     description:
-        "Passionate Front End Developer with a focus on creating intuitive and visually appealing digital experiences. Eager to learn and tackle new challenges with a positive attitude, I strive to deliver high-quality, user-centered solutions.",
+        "AI Engineer with a frontend background. I build AI solutions on Azure, on two principles: user-centred design and responsible AI. Microsoft Certified: Azure AI Apps and Agents Developer Associate.",
     github: "https://github.com/MohamedElmi10",
     email: "mohamed.elmiefc@gmail.com",
-    resume:
-        "https://drive.google.com/file/d/1Yx65E_bdwTfmaNCoyKYvMLCs8BJ2aAOV/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/mohamed-elmi-199007291/",
 };
 
 export const skills = [
+    {
+        title: "AI & Cloud",
+        skills: [
+            { name: "Azure AI Foundry", image: AzureAiFoundryLogo },
+            { name: "Azure OpenAI", image: AzureOpenAILogo },
+            { name: "Azure AI Search", image: AzureAiSearchLogo },
+            { name: "RAG" },
+            { name: "Function Calling" },
+            { name: "MCP" },
+            { name: "AI Agents" },
+            { name: "Computer Vision", image: ComputerVisionLogo },
+            { name: "NLP" },
+            { name: "Content Safety", image: ContentSafetyLogo },
+        ],
+    },
     {
         title: "Frontend",
         skills: [
@@ -44,13 +70,11 @@ export const skills = [
             },
             {
                 name: "CSS",
-                image:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+                image: Css3Logo,
             },
             {
                 name: "JavaScript",
-                image:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+                image: JavaScriptLogo,
             },
             {
                 name:"TypeScript",
@@ -64,6 +88,10 @@ export const skills = [
                     "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
             },
             {
+                name: "Next.js",
+                image: NextJsLogo,
+            },
+            {
                 name:"Tailwind CSS",
                 image:
                 "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
@@ -71,8 +99,7 @@ export const skills = [
             },
              {
                 name:"Ant Design",
-                image:
-                "https://camo.githubusercontent.com/f6bf5ee2b30310ad83a81212b9be69bdc2bb577f2ebe868ad89f8586b4721ffc/68747470733a2f2f67772e616c697061796f626a656374732e636f6d2f7a6f732f726d73706f7274616c2f4b4470677667754d704766716148506a6963524b2e737667"
+                image: AntDesignLogo,
 
             },
             
@@ -120,8 +147,7 @@ export const skills = [
             },
             {
                 name: "VS Code",
-                image:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
+                image: VsCodeLogo,
             },
             {
                 name: "Insomnia",
@@ -199,8 +225,32 @@ export const education = [
     },
 ];
 
+export const certifications = [
+    {
+        id: 0,
+        title: "Microsoft Certified: Azure AI Apps and Agents Developer Associate",
+        date: "Earned August 2026",
+        credentialId: "A5D54B676DB783A3",
+        url: "https://learn.microsoft.com/api/credentials/share/en-gb/MohamedElmi-4290/E4FDBF94BAACC1EA?sharingId=3105092C8A9E2CA6",
+    },
+];
+
 export const projects = [
-   
+
+    {
+        id: 6,
+        title: "AI Arena",
+        date: "2026",
+        description:
+            "A live playground for Azure AI — speech, vision, language, retrieval and agents, each usable directly in the browser.",
+        image:
+            AiArenaImg,
+        tags: ["React", "TypeScript", "Azure AI", "Azure OpenAI"],
+        category: "web app",
+        github: "",
+        webapp: "https://aiarena-mohamed-elmi.netlify.app/",
+        techStack: ["React", "TypeScript", "Azure AI Foundry", "Azure OpenAI", "Azure AI Search"],
+    },
     {
         id: 0,
         title: "Uvak App",
