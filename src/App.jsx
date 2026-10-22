@@ -1,66 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import styled, { ThemeProvider } from 'styled-components';
-import { darkTheme, lightTheme } from './utils/Themes';
-import Navbar from './components/Navbar';
-import Hero from './components/HeroSection';
-import Skills from './components/Skills';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Projects from './components/Projects';
-import Certification from './components/Certification';
-import Footer from './components/Footer';
+import styled, { ThemeProvider } from "styled-components";
+import { Bio } from "./data/constants";
+import { lightTheme, darkTheme } from "./styles/theme";
+import GlobalStyle from "./styles/global-style";
+import useThemeMode from "./hooks/use-theme-mode";
+import SiteHeader from "./components/site-header/site-header";
+import HeroBento from "./components/hero-bento/hero-bento";
+import SkillsSection from "./components/skills-section/skills-section";
+import CertificationSection from "./components/certification-section/certification-section";
+import ProjectsBento from "./components/projects-bento/projects-bento";
+import ContactSection from "./components/contact-section/contact-section";
+import { LanguageProvider, useLanguage } from "./i18n/language-context";
 
-
-const Body = styled.div`
-background-color:${({ theme }) => theme.bg};
-width: 100%;
-
-overflow-x: hidden;
+const SiteFooter = styled.footer`
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 20px 48px;
+  color: ${({ theme }) => theme.muted};
+  font-size: 0.9rem;
 `;
 
-const Wrapper = styled.div`
-background: linear-gradient(
-  38.73deg,
-  rgba(204, 0, 187, 0.15) 0%,
-  rgba(201, 32, 184, 0) 50%
-), 
-  linear-gradient(
-  141.27deg, 
-  rgba(0, 70, 209, 0) 50%,
-  rgba(0, 70, 209, 0.15) 100%
-);
-width: 100%;
-clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
-padding-bottom: 100px;
-overflow: visible;
-
-`
-function App() {
-
+function Page() {
+  const [isDark, toggleTheme] = useThemeMode();
+  const { t } = useLanguage();
 
   return (
-    <>
-      <ThemeProvider theme={darkTheme}>
-        <Router>
-          <Navbar />
-          <Body>
-            <Hero />
-            <Wrapper>
-              <Skills />
-            </Wrapper>
-            <Certification />
-            <Projects />
-            <Footer />
-          </Body>
-
-        </Router>
-
-      </ThemeProvider>
-
-    </>
-  )
+    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+      <GlobalStyle />
+      <a className="skip-link" href="#main">
+        {t.skip}
+      </a>
+      <SiteHeader isDark={isDark} onToggleTheme={toggleTheme} />
+      <main id="main">
+        <HeroBento />
+        <SkillsSection />
+        <CertificationSection />
+        <ProjectsBento />
+        <ContactSection />
+      </main>
+      <SiteFooter>
+        © {new Date().getFullYear()} {Bio.name}
+      </SiteFooter>
+    </ThemeProvider>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <LanguageProvider>
+      <Page />
+    </LanguageProvider>
+  );
+}
+
+export default App;
