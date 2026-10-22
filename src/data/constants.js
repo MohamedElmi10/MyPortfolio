@@ -1,7 +1,5 @@
-import WeatherWave from "../Pictures/WeatherWave.png"
 import WeatherWaveVideo from "../Pictures/WeatherApp.mov"
 import ReactNativeApp from "../Pictures/ReactNativeApp.png"
-import ChattApp from "../Pictures/ChattApp.png"
 import PortFolioImg from "../Pictures/PortFolio.png"
 import CypressImg from "../Pictures/Cypress.png"
 import InsomniaLogo from "../Pictures/Insomnia.png"
@@ -29,37 +27,24 @@ import Healthtech1 from "../Pictures/Healthtech 1.png"
 import Healthtech2 from "../Pictures/Healthtech 2.png"
 import Healthtech3 from "../Pictures/Healthtech 3.png"
 import Healthtech4 from "../Pictures/Healthtech 4.png"
+import TastyBitesImg from "../Pictures/TastyBites.jpg"
 export const Bio = {
     name: "Mohamed Elmi",
-    roles: [
-        "AI Engineer",
-        "Azure AI Developer",
-        "Frontend Developer",
-        "Fullstack Developer",
-    ],
-    description:
-        "AI Engineer with a frontend background. I build AI solutions on Azure, on two principles: user-centred design and responsible AI. Microsoft Certified: Azure AI Apps and Agents Developer Associate.",
+    // why: { en, sv } only where the wording differs; read through tr() in src/i18n/tr.js
+    roles: {
+        en: ["Junior Frontend Developer", "React", "TypeScript", "AI Integration"],
+        sv: ["Junior frontendutvecklare", "React", "TypeScript", "AI-integration"],
+    },
+    description: {
+        en: "Frontend developer focused on building clear, accessible and responsive user interfaces, mainly in React and TypeScript. I'm curious by nature and love trying out new technologies, most recently AI integration on Azure (Microsoft Certified, AI-103).",
+        sv: "Frontendutvecklare med fokus på att bygga tydliga, tillgängliga och responsiva användargränssnitt, främst i React och TypeScript. Jag är nyfiken och älskar att testa ny teknik, senast AI-integration i Azure (Microsoft Certified, AI-103).",
+    },
     github: "https://github.com/MohamedElmi10",
     email: "mohamed.elmiefc@gmail.com",
     linkedin: "https://www.linkedin.com/in/mohamed-elmi-199007291/",
 };
 
 export const skills = [
-    {
-        title: "AI & Cloud",
-        skills: [
-            { name: "Azure AI Foundry", image: AzureAiFoundryLogo },
-            { name: "Azure OpenAI", image: AzureOpenAILogo },
-            { name: "Azure AI Search", image: AzureAiSearchLogo },
-            { name: "RAG" },
-            { name: "Function Calling" },
-            { name: "MCP" },
-            { name: "AI Agents" },
-            { name: "Computer Vision", image: ComputerVisionLogo },
-            { name: "NLP" },
-            { name: "Content Safety", image: ContentSafetyLogo },
-        ],
-    },
     {
         title: "Frontend",
         skills: [
@@ -88,6 +73,14 @@ export const skills = [
                     "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
             },
             {
+                name: "Angular",
+                image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg",
+            },
+            {
+                name: "Sass / SCSS",
+                image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
+            },
+            {
                 name: "Next.js",
                 image: NextJsLogo,
             },
@@ -111,11 +104,26 @@ export const skills = [
         ],
     },
     {
+        title: { en: "AI & Cloud", sv: "AI & moln" },
+        skills: [
+            { name: "Azure AI Foundry", image: AzureAiFoundryLogo },
+            { name: "Azure OpenAI", image: AzureOpenAILogo },
+            { name: "Azure AI Search", image: AzureAiSearchLogo },
+            { name: "RAG" },
+            { name: "Function Calling" },
+            { name: "MCP" },
+            { name: "AI Agents" },
+            { name: "Computer Vision", image: ComputerVisionLogo },
+            { name: "NLP" },
+            { name: "Content Safety", image: ContentSafetyLogo },
+        ],
+    },
+    {
         title: "Backend",
         skills: [
             {
                 name: "Node Js",
-                image: "https://nodejs.org/static/images/logo.svg",
+                image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
             },
             
             {
@@ -127,7 +135,20 @@ export const skills = [
     },
 
     {
-        title: "Others",
+        title: { en: "Databases", sv: "Databaser" },
+        skills: [
+            {
+                name: "MongoDB",
+                image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
+            },
+            {
+                name: "MariaDB",
+                image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mariadb/mariadb-original.svg",
+            },
+        ],
+    },
+    {
+        title: { en: "Others", sv: "Övrigt" },
         skills: [
             {
                 name: "GitHub",
@@ -227,36 +248,58 @@ export const education = [
 
 export const certifications = [
     {
+        id: 1,
+        title: {
+            en: "Higher Vocational Education Diploma — Frontend Developer",
+            sv: "Yrkeshögskoleexamen – Frontendutvecklare",
+        },
+        localTitle: "Yrkeshögskoleexamen, inriktning Frontendutvecklare",
+        issuer: "JENSEN Education · Yrkeshögskolan",
+        date: { en: "Aug 2023 – Jun 2025", sv: "aug 2023 – jun 2025" },
+        credits: { en: "400 YH credits (2 years full-time)", sv: "400 YH-poäng (2 år på heltid)" },
+        highlights: {
+            en: [
+            "Frontend web development",
+            "JavaScript frameworks",
+            "Advanced JavaScript",
+            "UX & interaction design",
+            "Agile methods & testing",
+            "Packaging, delivery & monitoring",
+            "2 internship periods (LIA)",
+            ],
+            sv: [
+                "Frontendutveckling för webben",
+                "JavaScript-ramverk",
+                "Avancerad JavaScript",
+                "UX och interaktionsdesign",
+                "Agila metoder och testning",
+                "Paketering, leverans och övervakning",
+                "2 LIA-perioder",
+            ],
+        },
+        // why: no url/PDF — the diploma shows personnummer, so it must never be published
+        url: "",
+    },
+    {
         id: 0,
         title: "Microsoft Certified: Azure AI Apps and Agents Developer Associate",
-        date: "Earned August 2026",
+        date: { en: "Earned August 2026", sv: "Certifierad augusti 2026" },
         credentialId: "A5D54B676DB783A3",
         url: "https://learn.microsoft.com/api/credentials/share/en-gb/MohamedElmi-4290/E4FDBF94BAACC1EA?sharingId=3105092C8A9E2CA6",
     },
 ];
 
 export const projects = [
-
-    {
-        id: 6,
-        title: "AI Arena",
-        date: "2026",
-        description:
-            "A live playground for Azure AI — speech, vision, language, retrieval and agents, each usable directly in the browser.",
-        image:
-            AiArenaImg,
-        tags: ["React", "TypeScript", "Azure AI", "Azure OpenAI"],
-        category: "web app",
-        github: "",
-        webapp: "https://aiarena-mohamed-elmi.netlify.app/",
-        techStack: ["React", "TypeScript", "Azure AI Foundry", "Azure OpenAI", "Azure AI Search"],
-    },
+    // why: frontend-first order — this portfolio targets frontend roles, AI work follows
     {
         id: 0,
         title: "Uvak App",
-        date: "Aug 2025 - Nov 2025",
-        description:
-            "A website developed for a non-profit education center with an emphasis on accessibility, clarity and responsive design.",
+        areas: ["Frontend"],
+        date: { en: "Aug 2025 – present (maintained)", sv: "aug 2025 – pågående (underhålls)" },
+        description: {
+            en: "A website developed for a non-profit education center with an emphasis on accessibility, clarity and responsive design.",
+            sv: "Webbplats för ett ideellt utbildningscenter, med fokus på tillgänglighet, tydlighet och responsiv design.",
+        },
         image:
         UvakApp,
         tags: ["HTML", "CSS", "Javascript", "ReactJS"],
@@ -267,11 +310,63 @@ export const projects = [
 
     },
     {
+        id: 7,
+        title: "TastyBites",
+        areas: ["Frontend", "Backend"],
+        date: { en: "Oct 2026", sv: "okt 2026" },
+        description: {
+            en: "Recipe site with a public side for browsing recipes and an admin app for creating and editing them. Built in Angular on its own API.",
+            sv: "Receptsajt med en publik del där besökare bläddrar bland recept, och en adminapp där recept skapas och redigeras. Byggd i Angular mot ett eget API.",
+        },
+        image: TastyBitesImg,
+        tags: ["Angular", "TypeScript", "SCSS", "ASP.NET Core"],
+        category: "web app",
+        github: "https://github.com/MohamedElmi10/Tastybites",
+        webapp: "https://tastybitesproject.netlify.app/",
+        techStack: ["Angular 16", "TypeScript", "SCSS", "ABP / ASP.NET Core", "MariaDB"],
+    },
+    {
+        id: 2,
+        title: "Healthtech ",
+        areas: ["Frontend"],
+        date: { en: "Nov 2024 - May 2025", sv: "nov 2024 – maj 2025" },
+        description: {
+            en: "Healthcare platform pages developed during my internship. Collaborated with designers, developers, and PMs.",
+            sv: "Sidor till en vårdplattform som jag byggde under min LIA, i nära samarbete med designers, utvecklare och projektledare.",
+        },
+        images: [Healthtech1, Healthtech2, Healthtech3, Healthtech4],
+        tags: ["React", "TypeScript", "Healthcare", "Web App"],
+        category: "web app",
+        github: "",
+        webapp: "#",
+        techStack: ["React", "TypeScript", "Tailwind CSS", "Ant Design"],
+    },
+    {
+        id: 6,
+        title: "AI Arena",
+        areas: ["Frontend", "AI"],
+        date: { en: "Aug 2026 – present (maintained)", sv: "aug 2026 – pågående (underhålls)" },
+        description: {
+            en: "A live playground for Azure AI — speech, vision, language, retrieval and agents, each usable directly in the browser.",
+            sv: "En testmiljö för Azure AI – tal, bild, språk, sökning och agenter – som går att prova direkt i webbläsaren.",
+        },
+        image:
+            AiArenaImg,
+        tags: ["React", "TypeScript", "Azure AI", "Azure OpenAI"],
+        category: "web app",
+        github: "https://github.com/MohamedElmi10/AI-Arena-platform",
+        webapp: "https://aiarena-mohamed-elmi.netlify.app/",
+        techStack: ["React", "TypeScript", "Azure AI Foundry", "Azure OpenAI", "Azure AI Search"],
+    },
+    {
         id: 1,
         title: "Mobile App",
-        date: "Oct 2025",
-        description:
-            "A demonstration video showcasing weather mobile app features and functionality. ",
+        areas: ["Frontend"],
+        date: { en: "Oct 2025", sv: "okt 2025" },
+        description: {
+            en: "A demonstration video showcasing weather mobile app features and functionality. ",
+            sv: "Demovideo som visar funktionerna i en väderapp för mobilen.",
+        },
         image: WeatherWaveVideo,
         type: "video",
         poster: ReactNativeApp, // Using the existing WeatherWave image as poster
@@ -284,40 +379,15 @@ export const projects = [
 
     },
     {
-        id: 2,
-        title: "Healthtech ",
-        date: "Nov 2024 - May 2025",
-        description:
-            "Healthcare platform pages developed during my internship. Collaborated with designers, developers, and PMs.",
-        images: [Healthtech1, Healthtech2, Healthtech3, Healthtech4],
-        tags: ["React", "TypeScript", "Healthcare", "Web App"],
-        category: "web app",
-        github: "",
-        webapp: "#",
-        techStack: ["React", "TypeScript", "Tailwind CSS", "Ant Design"],
-    },
-    {
-        id: 3,
-        title: "ChattApp",
-        date: "Aug 2024 ",
-        description:
-            "Real-time chat app with user authentication and instant messaging.",
-        image:
-            ChattApp,
-        tags: ["HTML", "CSS", "Javascript", "ReactJS"],
-        category: "web app",
-        github: "https://github.com/MohamedElmi10/ChattApp",
-        webapp: "https://chattappliccation.netlify.app",
-        techStack: ["React", "JavaScript", "HTML", "CSS"],
-
-    },
-    {
         id: 4,
        
         title: "Portfolio",
-        date: "Jul 2024 - Aug 2024",
-        description:
-            "Responsive portfolio showcasing projects and skills with smooth animations and modern UI.",
+        areas: ["Frontend"],
+        date: { en: "Jul 2024 - Aug 2024", sv: "jul 2024 – aug 2024" },
+        description: {
+            en: "Responsive portfolio showcasing projects and skills with smooth animations and modern UI.",
+            sv: "Responsiv portfolio som visar projekt och kompetenser, med mjuka animationer och ett modernt gränssnitt.",
+        },
         image:
             PortFolioImg,
         tags: ["HTML", "CSS", "Javascript", "ReactJS"],
@@ -328,24 +398,5 @@ export const projects = [
 
 
     },
-    {
-        id: 5,
-       
-        title: "WeatherWave",
-        date: "Feb 2024 - Jul 2024",
-        description:
-            "Weather app providing real-time forecasts with responsive design.",
-        image:
-            WeatherWave,
-        tags: ["HTML", "CSS", "Javascript", "Bootstrap"],
-        category: "web app",
-        github: "https://github.com/MohamedElmi10/weather-api-website.git",
-        webapp: "https://weatherwaave.netlify.app/",
-        techStack: ["JavaScript", "HTML", "CSS", "Bootstrap"],
-    },
-    
-    
-
-
 ];
 
