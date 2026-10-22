@@ -279,7 +279,7 @@ const ProjectMedia = ({ project, ratio, onOpenGallery }) => {
     return (
       <Frame $ratio={ratio}>
         <video controls playsInline preload="metadata" poster={project.poster} aria-label={p.video(title)}>
-          <source src={project.image} />
+          <source src={project.image} type="video/mp4" />
         </video>
       </Frame>
     );
