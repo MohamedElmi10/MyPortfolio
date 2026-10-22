@@ -1,6 +1,6 @@
-import WeatherWaveVideo from "../Pictures/WeatherApp.mov"
+import WeatherWaveVideo from "../Pictures/WeatherApp.mp4"
 import ReactNativeApp from "../Pictures/ReactNativeApp.png"
-import PortFolioImg from "../Pictures/PortFolio.png"
+import PortFolioImg from "../Pictures/PortFolio.webp"
 import CypressImg from "../Pictures/Cypress.png"
 import InsomniaLogo from "../Pictures/Insomnia.png"
 import FigmaLogo from "../Pictures/Figma.png"
@@ -22,7 +22,7 @@ import AzureOpenAILogo from "../Pictures/AzureOpenAI.svg"
 import AzureAiSearchLogo from "../Pictures/AzureAiSearch.svg"
 import ComputerVisionLogo from "../Pictures/ComputerVision.svg"
 import ContentSafetyLogo from "../Pictures/ContentSafety.svg"
-import UvakApp from "../Pictures/UvakImg.png"
+import UvakApp from "../Pictures/UvakImg.webp"
 import Healthtech1 from "../Pictures/Healthtech 1.png"
 import Healthtech2 from "../Pictures/Healthtech 2.png"
 import Healthtech3 from "../Pictures/Healthtech 3.png"
@@ -383,10 +383,10 @@ export const projects = [
        
         title: "Portfolio",
         areas: ["Frontend"],
-        date: { en: "Jul 2024 - Aug 2024", sv: "jul 2024 – aug 2024" },
+        date: { en: "Jul 2024 – present (maintained)", sv: "jul 2024 – pågående (underhålls)" },
         description: {
-            en: "Responsive portfolio showcasing projects and skills with smooth animations and modern UI.",
-            sv: "Responsiv portfolio som visar projekt och kompetenser, med mjuka animationer och ett modernt gränssnitt.",
+            en: "This site. Responsive and accessible, with light and dark mode, an English/Swedish switch and project filters.",
+            sv: "Den här sajten. Responsiv och tillgänglig, med ljust och mörkt läge, språkval mellan svenska och engelska och projektfilter.",
         },
         image:
             PortFolioImg,
@@ -394,7 +394,7 @@ export const projects = [
         category: "web app",
         github: "https://github.com/MohamedElmi10/MyPortfolio",
         webapp: "https://elmi-portfolio.netlify.app/",
-        techStack: ["React", "Styled Components", "JavaScript"],
+        techStack: ["React", "Styled Components", "JavaScript", "Vite"],
 
 
     },
